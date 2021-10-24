@@ -110,18 +110,7 @@ nav img {
     grid-area: contenido;
 }
 
-/* Sidebar */
 
-.contenedor .sidebar {
-    color: white;
-    background-color: black;
-    grid-area: sidebar;
-}
-
-iframe {
-    width: 100%;
-    height: 80%;
-}
 
 /* Footer */
 
