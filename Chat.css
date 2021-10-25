@@ -14,15 +14,15 @@
     flex-direction: column;
     background: #eee;
     width: 300px;
-    height: 350px;
     z-index: -123456;
     opacity: 0;
     transition: all .5s ease-in-out;
+    border-radius: 10px;
 }
 
 /* CONTENT ISOPEN */
 .chatbox--active {
-    transform: translateY(-40px);
+    transform: translateY(-30px);
     z-index: 123456;
     opacity: 1;
     
@@ -38,7 +38,11 @@
 .chatbox__header {
     position: sticky;
     top: 0;
-    background: orange;
+    background: rgb(221, 213, 164);
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
 }
 
 /* MESSAGES */
@@ -51,21 +55,30 @@
 }
 
 .messages__item {
-    background: orange;
+    background: rgb(221, 213, 164);
     max-width: 60.6%;
     width: fit-content;
 }
 
 .messages__item--operator {
+    display: flex;
+    justify-content: flex-end;
     margin-left: auto;
 }
 
 .messages__item--visitor {
     margin-right: auto;
+    margin-top: 15px;
+    padding-left: 15px;
 }
 
 /* FOOTER */
 .chatbox__footer {
+    display: flex;
+    flex-direction: column;
     position: sticky;
     bottom: 0;
+    text-align: end;
+    padding: 5px;
+    margin: 10px;
 }
