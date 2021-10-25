@@ -9,7 +9,7 @@
 /* Tags generales */
 
 p {
-    color: rgb(221, 213, 164);
+    color: black;
 }
 
 a {
@@ -22,9 +22,10 @@ ul {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: rgb(35, 35, 85);
+    color: black;
+    padding-bottom: 1rem;
 }
 
 span {
@@ -33,7 +34,7 @@ span {
 }
 
 h6 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color:rgb(247, 235, 195);
     padding-bottom: 10px;
 }
@@ -52,7 +53,7 @@ body{
 
 .contenedor{
     width: 90%;
-    max-width: 1000px; /*ancho máximo de la página*/
+    max-width: 2000px; /*ancho máximo de la página*/
     margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
     display: grid;
     grid-template-columns: repeat(3,1fr); /*3 columnas: contenido (con 2 widgets) + sidebar*/
