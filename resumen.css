@@ -8,8 +8,12 @@
 
 /* Tags generales */
 
-p {
+h2 {
     color: rgb(221, 213, 164);
+    width: 100%;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
 }
 
 a {
@@ -25,6 +29,7 @@ h1 {
     font-size: 2.5rem;
     font-weight: 700;
     color: rgb(35, 35, 85);
+    font-weight: 100%;
 }
 
 span {
@@ -32,10 +37,16 @@ span {
     color: grey;
 }
 
+h5 {
+    font-size: 1.3rem;
+    color:rgb(221, 213, 164);
+    padding: 5px;
+}
+
 h6 {
-    font-size: 1.1rem;
-    color:black;
-    padding-bottom: 10px;
+    font-size: 1.3rem;
+    color:rgb(221, 213, 164);
+    padding: 5px;
 }
 
 body{
@@ -97,16 +108,16 @@ nav img {
     width: 150px;
 }
 
- nav li  a {
+ nav li a {
     padding: 1.6rem;
     font-weight: bold;
 }
 
 /* Resumenes */
 
-.contenedor #course {
+#course {
     background-color: white;
-    padding: 4vw 0 4vw ;
+    padding: 10px;
     text-align: center;
     border-style: solid;
     border-color: black;
@@ -116,14 +127,16 @@ nav img {
 #course .course-box {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     grid-gap: 1rem;
-    margin-top: 50px;}
+    margin-top: 20px;
 }
 
-#course.courses {
+#course .courses {
+    display: flex;
+    flex-direction: column;
     text-align: start;
-    background: #black;
     height: 100%;
 }
 
@@ -132,9 +145,13 @@ nav img {
     height: 200px;
     background-size: cover;
     background-position: center;
+    margin: 15px;
 }
 
 #course .courses .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #course .courses .details .star i {
@@ -163,4 +180,78 @@ nav img {
     justify-content: flex-end;
     padding: 0px;
     margin: 0;
+}
+
+/* Media Queries */
+
+    /* Tablet */
+
+    @media screen and (max-width: 768px){
+        .contenedor {
+            grid-template-columns: repeat(1,1fr); 
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas:    "encabezado"
+                                    "contenido" 
+                                    "pie";
+        }
+
+        nav {
+            padding: 1vw 3vw;
+        }
+    
+        nav li  a {
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        .slider-1{
+            width: auto;
+        }
+
+        .slider-2{
+            width: auto;
+        }
+    }
+
+    /* Móvil */
+
+@media screen and (max-width: 450px){
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        padding: 0.5rem;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .pie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes-containers {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .redes-containers a{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 }
