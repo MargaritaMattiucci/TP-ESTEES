@@ -31,6 +31,7 @@ h1 {
 h3 {
     font-weight: 300;
     text-align: center;
+    margin-bottom: 7px;
 }
 
 span {
@@ -40,8 +41,8 @@ span {
 
 h6 {
     font-size: 1.5rem;
-    color:rgb(43, 41, 37);
-    padding-bottom: 10px;
+    color:rgb(247, 235, 195);
+    padding: 5px;
 }
 
 body{
@@ -61,21 +62,20 @@ body{
     max-width: 1300px; /*ancho máximo de la página*/
     margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
     display: grid;
-    grid-template-columns: repeat(4,1fr); /*3 columnas: contenido (con 2 widgets) + sidebar*/
+    grid-template-columns: repeat(2,auto); /*3 columnas: contenido (con 2 widgets) + sidebar*/
     grid-template-rows: repeat(4, auto); /*4 filas: header, contenido, widgets, footer*/
     gap: 10px;
-    grid-template-areas: "encabezado encabezado encabezado encabezado"
-                         "contenido contenido section section"
-                         "pie pie pie pie";
+    grid-template-areas: "encabezado encabezado"
+                         "contenido slider-1"
+                         "contenido slider-2"
+                         "pie pie";
 }
 
-.contenedor > div,
+.contenedor,
 .contenedor .encabezado,
 .contenedor .contenido,
-.contenedor .sidebar,
 .contenedor .pie {
 padding: 20px;
-border-radius: 4px;
 }
 
 
@@ -116,32 +116,46 @@ nav img {
     grid-area: contenido;
 }
 
-/* Section */
+/* Sliders */
 
-.contenedor section {
-    grid-area: section;
-}
+    /* Slider 1 */
 
-.separador {
-    margin-top: 15px;
-}
-
-.slider {
+.slider-1{
     overflow: hidden;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: rgb(221, 213, 164);
     align-items: center;
     background-color: rgb(221, 213, 164);
+    grid-area: slider-1;
+    padding: 0;
+    border-radius: 0;
+    width: 400px;
 }
 
-.slider figure {
+.slider-1 figure {
     position: relative;
     width: 500%;
     margin: 0;
     left: 0;
     animation: 20s slider infinite;
-    border-radius: 4px;
+}
+
+    /* Slider 2 */
+
+.slider-2 {
+    overflow: hidden;
+    align-items: center;
+    background-color: rgb(221, 213, 164);
+    grid-area: slider-2;
+    padding: 0;
+    border-radius: 0;
+    width: 400px;
+}
+
+.slider-2 figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
 }
 
 figure img {  
@@ -157,47 +171,11 @@ figure img {
 }  
 
 @keyframes slider {
-    0% {
-        left: 0;
-    }
-    20% {
-        left: 0;
-    }
-    25% {
-        left: -100%;
-    }
-    45% {
-        left: -100%;
-    }
-    50% {
-        left: -200%;
-    }
-    70% {
-        left: -200%;
-    }
-    75% {
-        left: -300%;
-    }
-    95% {
-        left: -300%;
-    }
-    100% {
-        left: -400%;
-    }
-}
+    0% {left: 0;}20% {left: 0;}25% {left: -100%;}
+    45% {left: -100%;}50% {left: -200%;}
+    70% {left: -200%;}75% {left: -300%;}
+    95% {left: -300%;}100% {left: -400%;}}
 
-/* Sidebar */
-
-.contenedor .sidebar {
-    color: white;
-    background-color: black;
-    grid-area: sidebar;
-}
-
-iframe {
-    width: 100%;
-    height: 80%;
-}
 
 /* Footer */
 
@@ -221,3 +199,79 @@ iframe {
     padding: 0px;
     margin: 0;
 }
+
+/* Media Queries */
+
+    /* Tablet */
+
+    @media screen and (max-width: 768px){
+        .contenedor {
+            grid-template-columns: repeat(1,1fr); 
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas:    "encabezado"
+                                    "contenido"
+                                    "slider-1"
+                                    "slider-2"
+                                    "pie";
+        }
+
+        nav {
+            padding: 1vw 3vw;
+        }
+    
+        nav li  a {
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        .slider-1{
+            width: auto;
+        }
+
+        .slider-2{
+            width: auto;
+        }
+    }
+
+    /* Movil */
+
+    @media screen and (max-width: 450px){
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        nav ul {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        nav ul li {
+            padding: 0.5rem;
+        }
+    
+        nav ul li a {
+            font-size: 20px;
+        }
+    
+        .pie {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .redes-containers {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+    
+        .redes-containers a{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
