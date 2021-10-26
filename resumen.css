@@ -41,6 +41,7 @@ h5 {
     font-size: 1.3rem;
     color:rgb(221, 213, 164);
     padding: 5px;
+    cursor: pointer;
 }
 
 h6 {
@@ -146,6 +147,7 @@ nav img {
     background-size: cover;
     background-position: center;
     margin: 15px;
+    cursor: pointer;
 }
 
 #course .courses .details {
