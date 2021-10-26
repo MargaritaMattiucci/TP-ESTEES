@@ -28,6 +28,11 @@ h1 {
     padding-bottom: 1rem;
 }
 
+h3 {
+    font-weight: 300;
+    text-align: center;
+}
+
 span {
     font-size: .9rem;
     color: grey;
@@ -53,14 +58,14 @@ body{
 
 .contenedor{
     width: 90%;
-    max-width: 2000px; /*ancho máximo de la página*/
+    max-width: 1300px; /*ancho máximo de la página*/
     margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
     display: grid;
     grid-template-columns: repeat(4,1fr); /*3 columnas: contenido (con 2 widgets) + sidebar*/
     grid-template-rows: repeat(4, auto); /*4 filas: header, contenido, widgets, footer*/
     gap: 10px;
     grid-template-areas: "encabezado encabezado encabezado encabezado"
-                         "contenido contenido sidebar sidebar"
+                         "contenido contenido section section"
                          "pie pie pie pie";
 }
 
@@ -85,7 +90,7 @@ nav {
     padding: 1vw 8vw;
     grid-area: encabezado;
     background: black;
-    color: hsl(52, 91%, 69%);
+    color: rgb(221, 213, 164);
 }
 
 nav ul {
@@ -113,15 +118,73 @@ nav img {
 
 /* Section */
 
-section {
-    display: flex;
-    flex-direction: column;
+.contenedor section {
+    grid-area: section;
 }
 
-section img {  
-    max-width: 300px;  
-    max-height: 300px;
+.separador {
+    margin-top: 15px;
+}
+
+.slider {
+    overflow: hidden;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(221, 213, 164);
+    align-items: center;
+    background-color: rgb(221, 213, 164);
+}
+
+.slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+    border-radius: 4px;
+}
+
+figure img {  
+    max-width: 100%;  
+    max-height: 100%;
+    width: 20%;
+    float: left;
+    border-radius: 5px 5px 0 0;
+    border-style: solid;
+    border-color: rgb(221, 213, 164);
+    border-width: 10px;
+    border-radius: 5px;
 }  
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
 
 /* Sidebar */
 
