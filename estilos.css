@@ -13,7 +13,7 @@ p {
 }
 
 a {
-    color:rgb(247, 235, 195);
+    color:rgb(221, 213, 164);
     text-decoration: none;
 }
 
@@ -41,7 +41,7 @@ span {
 
 h6 {
     font-size: 1.5rem;
-    color:rgb(247, 235, 195);
+    color:rgb(221, 213, 164);
     padding: 5px;
 }
 
