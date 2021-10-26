@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="typing.css">
-    <link rel="stylesheet" href="resumen.css">
-    <script src="https://kit.fontawesome.com/e032345689.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="iconos.css">
+    <link rel="stylesheet" href="resumen.css">
+    <link rel="stylesheet" href="chat.css">
+    <script src="https://kit.fontawesome.com/e032345689.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/081ba00e0f.js" crossorigin="anonymous"></script>
-    <title>Resumenes </title>
+    <script src="./formcheck.js"></script>
+    <title>Resumenes</title>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
 
         <nav>
             <a href="index.html">
-                <img src="/logo1.png" alt="Imagen.png">
+                <img src="/imgs/logo1.png" alt="Imagen.png">
             </a>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -27,15 +29,14 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        
-        <!--resumenes-->
+
         <section id="course">
             <h1>MATERIAL DE RESUMENES</h1>
             <p>Aqui puede buscar y postear los materiales de lectura</p>
             <div class="course-box">
 
                 <div class="courses">
-                    <img src="econ.png" alt="">
+                    <img src="/imgs/econ.png" alt="">
                     <div class="details">
                         <h6>Economía</h6>
                         <div class="star">
@@ -44,13 +45,12 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-
                     </div>
                 </div>
 
                 <div class="courses">
                     <div class="details>">
-                        <img src="matematica.png" alt="">
+                        <img src="/imgs/matematica.png" alt="">
                         <h6>Matemáticas</h6>
                         <div class="star">
                             <i class="fas fa-star"></i>
@@ -63,7 +63,7 @@
 
                 <div class="courses">
                     <div class="details">
-                        <img src="webdev.png" alt="">
+                        <img src="/imgs/webdev.png" alt="">
                         <h6>Desarrollo Web</h6>
                         <div class="star">
                             <i class="fas fa-star"></i>
@@ -77,19 +77,42 @@
             </div>
         </section>
 
+        <footer class="pie">
+            <h6>Derechos Reservados</h6>
+            <div class="redes-containers">
+                <a href="https://www.facebook.com/codeleague7" target="_blank" class="facebook"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="https://www.instagram.com/codeleague7" target="_blank" class="instagram"><i class="fab fa-instagram-square fa-2x"></i></a>
+                <a href="#" class="gmail"><i target="_blanck" class="fas fa-envelope fa-2x"></i></a>
+            </div>  
+        </footer>
+
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    Escribinos un mensaje!
+                </div>
+                <div class="messages">
+                    <div>
+                        <div class="messages__item--visitor">
+                            Hola!
+                        </div>
+                        <div class="messages__item--operator">
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Escriba un mensaje">
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button>I'm a button!</button>
+            </div>
+        </div>
+        
+        <script src="./Chat.js"></script>
+        <script src="./app.js"></script>
     </div>
 
-
-    <footer class="pie">
-        <p>Derechos Reservados</p>
-        <div class="redes-containers">
-         <a href="https://www.facebook.com/codeleague7" target="_blank" class="facebook"><i
-         class="fab fa-facebook-square fa-2x"></i></a>
-         <a href="https://www.instagram.com/codeleague7" target="_blank" class="instagram"><i
-          class="fab fa-instagram-square fa-2x"></i></a>
-          <a href="#" class="gmail"><i target="_blanck" class="fas fa-envelope fa-2x"></i></a>
-        </div>
-    </footer>
 </body>
 
 </html>
